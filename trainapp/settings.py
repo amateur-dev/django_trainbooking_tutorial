@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'trainapp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd526mfmv7k2rd9',                      
+        'USER': 'cscxeugutvkzqw',
+        'PASSWORD': '8d8e1268f506d1faa9a4471f53d16464cc373105cf7e025fc4c91d37678ff76d',
+        'HOST': 'ec2-54-195-252-243.eu-west-1.compute.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
