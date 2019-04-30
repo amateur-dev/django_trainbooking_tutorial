@@ -106,3 +106,4 @@ venv.bak/
 # vscode settings
 .vscode/settings.json
 .DS_Store
+trainapp/secret.py
