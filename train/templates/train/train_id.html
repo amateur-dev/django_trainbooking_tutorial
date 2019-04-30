@@ -11,7 +11,7 @@
     <li>Time consumed is {{ train.duration }}</li>
 </ul>
 
-<h2>Passengers</h2>
+<h2>Passengers travelling in this train</h2>
 <ul>
     {% for passenger in passengers %}
     <li>
@@ -22,6 +22,20 @@
 
     {% endfor %}
 </ul>
+
+<h2>Passengers not travelling in this train</h2>
+<ul>
+    {% for passenger_not in passengers_not %}
+    <li>
+        {{ passenger_not }}
+    </li>
+    {% empty %}
+    No passengers found.
+
+    {% endfor %}
+</ul>
+
+
 
 
 <a href="{% url 'index' %}">Take me back to the home page</a>

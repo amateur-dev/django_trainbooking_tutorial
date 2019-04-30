@@ -3,6 +3,8 @@ from django.shortcuts import render
 
 from .models import Train
 from .models import Station
+from .models import Passenger
+
 # Create your views here.
 
 
@@ -22,6 +24,7 @@ def train_id(request, train_id):
         raise Http404("Train does not exist")
     context = {
         "train": train,
-        "passengers": train.passengers.all()
+        "passengers": train.passengers.all(),
+        "passengers_not": Passenger.objects.exclude(trains=train).all()
     }
     return render(request, "train/train_id.html", context)
